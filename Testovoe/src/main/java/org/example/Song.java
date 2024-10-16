@@ -15,12 +15,18 @@ public class Song {
         this.duration = duration;
     }
     public String getTrack_name() {
-        return track_name;
+        if(track_name != null) {
+            return track_name;
+        } else throw new NullPointerException("track_name is null");
     }
     public String getArtist() {
-        return artist;
+        if(artist != null) {
+            return artist;
+        } else throw new NullPointerException("artist is null");
     }
     public int getDuration() {
-        return duration;
+        if(duration != 0) {
+            return duration;
+        } else throw new NullPointerException("duration is null");
     }
 }
